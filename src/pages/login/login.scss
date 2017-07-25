@@ -1,0 +1,25 @@
+page-login {
+
+    #welcome{
+    background: color($colors, stupid);
+    h1{
+        font-size: 42px;
+        margin-top: 10%;
+        text-align: center;
+    }
+    .marginTop{
+        margin-top: 15px;
+    }
+    .textAlign{
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .imgModify{
+        display: block;
+        margin: 30px auto 30px auto;
+        width: 250px;
+    }
+}
+
+}

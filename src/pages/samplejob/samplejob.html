@@ -1,0 +1,110 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>D/O : X12345</ion-title>
+    
+
+    <ion-buttons end>
+      <ion-title>Invoice: 96111</ion-title>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-card>
+      <ion-item-sliding>
+
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="https://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-terminator.png">
+          </ion-thumbnail>
+          <h2><strong>Name: Mr.Kwan</strong></h2>
+          <p>Address: Woodland Ave 3, Block 21, </p>
+          <p>#02-04, Singapore 530021</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="primary">
+        <ion-icon name="map"></ion-icon>
+        Map
+      </button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+
+      <h4 class="notes">Customer Notes: </h4>
+      <p class="notesInRed">The door bell is broken. Call when you reach.</p>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6><button ion-button block large color="light" (click)="sendSMS()"><ion-icon name="text"></ion-icon>&nbsp;&nbsp;Text</button></ion-col>
+          <ion-col col-6><button ion-button block large color="light" (click)="callNumber()"><ion-icon name="call"></ion-icon>&nbsp;&nbsp;Call</button></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6><button ion-button block large color="light" (click)="scanBarcode()"><ion-icon name="barcode"></ion-icon>&nbsp;&nbsp;Barcode <br>Scanner</button></ion-col>
+          <ion-col col-6><button ion-button block large color="light" (click)="takePhoto()"><ion-icon name="camera"></ion-icon>&nbsp;&nbsp;Camera&nbsp;&nbsp;<ion-badge item-end>{{badgeNumber}}</ion-badge></button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+    <ion-card>
+
+      <ion-item>
+        <h2>Item List: </h2>
+        <br>
+        <p>1. Pokka Jasmine Green Tea</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Qty - 5</p>
+        <br>
+        <p>2. Pokka Ice Lemon Tea</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Qty - 10</p>
+        <br>
+        <p>3. Pokka Milk Tea</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Qty - 15</p>
+      </ion-item>
+
+    </ion-card>
+
+  </ion-list>
+
+  <div *ngIf="barResults">
+    <p>{{barResults.text}}</p>
+    <p>{{barResults.format}}</p>
+    <p>{{barResults.cancelled}}</p>
+  </div>
+
+  <h2 *ngIf='signatureImage'>Customer Signature: </h2>
+  <br>
+  <div> <img [src]="signatureImage" *ngIf='signatureImage' /></div>
+
+  <img [src]="image" *ngIf="image" />
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let photo of photos; let id = index">
+        <ion-card class="block">
+          <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(index)"></ion-icon>
+          <img [src]="photo" *ngIf="photo" />
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer no-shadow>
+  <ion-grid>
+
+
+    <ion-row>
+      <ion-col col-12><button ion-button block large (click)="openSignatureModel()"><ion-icon name="clipboard"></ion-icon>&nbsp;&nbsp;Sign</button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6><button ion-button block large color="unsuccessful" (click)="showCheckbox()">Unsuccessful</button></ion-col>
+      <ion-col col-6><button ion-button block large color="unsuccessful" (click)="presentToast()">Delivered</button></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

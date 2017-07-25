@@ -1,0 +1,22 @@
+<ion-content padding id="welcome">
+
+  <h1>iZeeM Demo</h1>
+  <!-- <div class="textAlign">Discover some interesting things.</div> -->
+  <img class="imgModify" src="https://pbs.twimg.com/profile_images/880344180249116672/4ESI6NeI_400x400.jpg" />
+
+
+  <ion-list>
+
+    <ion-item>
+      <ion-input type="text" #username placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" #password placeholder="Password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button class="marginTop" full (click)="fakelogin()">Log in</button>
+
+</ion-content>

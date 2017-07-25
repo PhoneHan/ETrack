@@ -1,0 +1,25 @@
+page-samplejob {
+    .notes{
+        padding-left: 10px;
+        font-weight: bold;
+    }
+    .notesInRed{
+        padding-left: 10px;
+        color: red;
+    }
+
+    .text{
+        background: color($colors, energy);
+    }
+
+    .block{
+    position: relative;
+    .deleteIcon{
+        position: absolute;
+        margin-left:85%;
+        margin-top: 5px;
+        color:#FFF;
+    }
+}
+
+}

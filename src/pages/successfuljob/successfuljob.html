@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-title>iZeeTRACK</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-searchbar></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+
+  
+  <ion-card>
+    <ion-card-content>
+
+      <h2 class="textBold"><strong>Delivery Order : </strong>X12345</h2>
+      <h2 class="textBold"><strong>Inovice : </strong>X12345</h2>
+      <h2 class="textBold"><strong>Address : </strong>Woodland Ave 3, Block 21, #02-04, Singapore 530021</h2>
+      <h2 class="textBold"><strong>Name : </strong>Mr.Kwan (Contact No: 97267293)</h2>
+      <h2 class="textBold"><strong>Time : </strong>Time: 9am-12pm, Date: 7/18/2017</h2>
+      <h2 class="textBold"><strong>Status : <span style="color:green"> Completed </span></strong></h2>
+
+    </ion-card-content>
+
+</ion-card>
+  <ion-card>
+
+    <ion-card-content>
+
+      <h2 class="textBold"><strong>Delivery Order : </strong>X12345</h2>
+      <h2 class="textBold"><strong>Inovice : </strong>X12345</h2>
+      <h2 class="textBold"><strong>Address : </strong>Woodland Ave 3, Block 21, #02-04, Singapore 530021</h2>
+      <h2 class="textBold"><strong>Name : </strong>Mr.Kwan (Contact No: 97267293)</h2>
+      <h2 class="textBold"><strong>Time : </strong>Time: 9am-12pm, Date: 7/18/2017</h2>
+      <h2 class="textBold"><strong>Status : <span style="color:gold">In Progress</span></strong></h2>
+
+    </ion-card-content>
+</ion-card>
+  <ion-card>
+    <ion-card-content>
+
+      <h2 class="textBold"><strong>Delivery Order : </strong>X12345</h2>
+      <h2 class="textBold"><strong>Inovice : </strong>X12345</h2>
+      <h2 class="textBold"><strong>Address : </strong>Woodland Ave 3, Block 21, #02-04, Singapore 530021</h2>
+      <h2 class="textBold"><strong>Name : </strong>Mr.Kwan (Contact No: 97267293)</h2>
+      <h2 class="textBold"><strong>Time : </strong>Time: 9am-12pm, Date: 7/18/2017</h2>
+      <h2 class="textBold"><strong>Status : <span style="color:gold">In Progress</span></strong></h2>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer no-shadow>
+	<ion-toolbar position="bottom">
+		<button ion-button full (click)="presentLoading()" >Restart</button>
+	</ion-toolbar>
+</ion-footer>

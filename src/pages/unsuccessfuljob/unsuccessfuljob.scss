@@ -1,0 +1,10 @@
+page-unsuccessfuljob {
+
+    .textAlign{
+        margin-top: 5%;
+        text-align: center;
+    }
+    .unsuccessful{
+        background-color:  color($colors, danger);
+    }
+}

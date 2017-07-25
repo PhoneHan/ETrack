@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Customer Signature: </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<signature-pad [options]="signaturePadOptions" id="signatureCanvas"></signature-pad> 
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-6>
+      <button ion-button full large color="light" (click)="drawCancel()">Cancel</button>
+    </ion-col>
+
+    <ion-col col-6>
+      <button ion-button full large color="light" (click)="drawClear()">Clear</button>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+
+<ion-item>
+  <ion-label>All goods received in correct quantities, good order and codition</ion-label>
+  <ion-checkbox color="dark" checked="false"></ion-checkbox>
+</ion-item>
+
+<ion-item>
+  <ion-label>Partial Delivery</ion-label>
+  <ion-checkbox color="dark" checked="false"></ion-checkbox>
+</ion-item>
+
+<ion-item>
+    <ion-input type="textarea" placeholder="Remarks"></ion-input>
+  </ion-item>
+
+<ion-grid>
+  <ion-row>
+
+    <ion-col col-12>
+      <button ion-button full large (click)="drawComplete()">Submit</button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>
